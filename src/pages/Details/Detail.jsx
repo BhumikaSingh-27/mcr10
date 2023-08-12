@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
 import { useData } from "../../contexts/DataContext";
-
+import "./Details.css"
 const Detail = () => {
   const { Id } = useParams();
   const { state } = useData();
@@ -9,11 +9,11 @@ const Detail = () => {
   const item = state.data.find(({ id }) => id.toString() === Id);
 
   return (
-    <div>
+    <div className="details">
       <h1>{item.name}</h1>
-      <div>
-        <img src={item.imageUrl} alt="" />
-        <p>price: {item.price}</p>
+      <div className="text">
+        <img id="imgDiv" src={item.imageUrl} alt="" />
+        <p>price: ${item.price}</p>
         <p>stock: {item.stock}</p>
         <p>sku: {item.sku}</p>
         <p>department: {item.department}</p>

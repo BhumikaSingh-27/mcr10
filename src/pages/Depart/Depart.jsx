@@ -14,9 +14,10 @@ const Depart = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flexRow home">
       {depart.map((ele) => (
         <div
+        className="card hover"
           onClick={() => {
             dispatch({ type: "SET_DEPT", payload: ele });
             navigate("/product");

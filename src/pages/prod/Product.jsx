@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../../components/header/Header";
 import "./prod.css";
 import { useData } from "../../contexts/DataContext";
-import Modal from "../../components/modal/Modal";
+
 import { useNavigate } from "react-router-dom";
 
 const Product = () => {
@@ -24,8 +24,7 @@ const Product = () => {
     : [...sortData];
 
   return (
-    <div>
-      {isOpen && <Modal />}
+    <div className="product">
       <Header />
       <table>
         <thead>
@@ -39,7 +38,7 @@ const Product = () => {
         <tbody>
           {finalData.map(
             ({ id, imageUrl, name, description, price, stock, supplier }) => (
-              <tr onClick={() => navigate(`/product/${id}`)}>
+              <tr className="tr" onClick={() => navigate(`/product/${id}`)}>
                 <td>
                   {" "}
                   <img id="img" src={imageUrl} alt="" />

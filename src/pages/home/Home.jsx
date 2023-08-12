@@ -1,6 +1,6 @@
 import React from "react";
 import { useData } from "../../contexts/DataContext";
-import "./Home.css"
+import "./Home.css";
 
 const Home = () => {
   const { state } = useData();
@@ -14,19 +14,19 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <h1>{totalstock}</h1>
+    <div className="flexRow home">
+      <div className="card">
+        <h1 id="green">{totalstock}</h1>
         <p>Total stock</p>
       </div>
 
-      <div>
-        <h1>{delivery}</h1>
+      <div className="card">
+        <h1 id="orange">{delivery}</h1>
         <p>Total Delivered</p>
       </div>
 
-      <div>
-        <h1>{lowStock.length}</h1>
+      <div className="card">
+        <h1 id="red">{lowStock.length}</h1>
         <p>Total stock</p>
       </div>
     </div>
