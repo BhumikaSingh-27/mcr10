@@ -1,8 +1,10 @@
 import React from "react";
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
+import { useData } from "../../contexts/DataContext";
 
 const Sidebar = () => {
+  const { dispatch } = useData();
   return (
     <div className="sidebar">
       <NavLink className="sideNav" to="/">
@@ -12,7 +14,7 @@ const Sidebar = () => {
         <div>Department</div>
       </NavLink>
       <NavLink className="sideNav" to="/product">
-        <div>Products</div>
+        <div onClick={()=>dispatch({ type: "RESET" })}>Products</div>
       </NavLink>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import Header from "../../components/header/Header";
 import "./prod.css";
 import { useData } from "../../contexts/DataContext";
@@ -6,8 +6,9 @@ import { useData } from "../../contexts/DataContext";
 import { useNavigate } from "react-router-dom";
 
 const Product = () => {
-  const { state, isOpen } = useData();
+  const { state} = useData();
   const navigate = useNavigate();
+
 
   const deptData = state.dept
     ? state.data.filter(({ department }) => department === state.dept)

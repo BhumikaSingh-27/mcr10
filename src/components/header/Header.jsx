@@ -24,15 +24,18 @@ const Header = () => {
         </select>
 
         <div>
-          <input
-            type="checkbox"
-            checked={state.stock}
-            value="low"
-            onChange={(e) => {
-              dispatch({ type: "SET_STOCK" });
-            }}
-          />
-          Low stock
+          <p>
+            {" "}
+            <input
+              type="checkbox"
+              checked={state.stock}
+              value="low"
+              onChange={(e) => {
+                dispatch({ type: "SET_STOCK" });
+              }}
+            />{" "}
+            Low stock
+          </p>
         </div>
 
         <select

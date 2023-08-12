@@ -34,6 +34,9 @@ export const reducer = (state, { type, payload }) => {
       };
       return { ...state, data: [...state.data, newdata] };
     }
+    case "RESET": {
+      return { ...state, dept: "" };
+    }
     default:
       return state;
   }
