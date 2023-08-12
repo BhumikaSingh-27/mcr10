@@ -21,8 +21,10 @@ td {
     width: 10rem;
     border-top: 2px solid black
 }
-.tr:hover{
+
+td:hover{
     cursor: pointer;
+    color: var(--clr-primary);
 }
 
 #img {
