@@ -1,0 +1,19 @@
+/* 
+tr{
+    width:100%;
+    height:10rem
+} */
+
+td{
+    width:10rem;
+}
+#img {
+    object-fit: cover;
+    width: 10rem;
+    height: 10rem;
+}
+
+.notLink{
+    text-decoration: none;
+    color: black;
+}
